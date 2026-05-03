@@ -1,101 +1,28 @@
-# Baldis Basics - Web Version
+# Baldi's Basics Classic - Static Web Build
 
-This repository contains the web-based version of Baldis Basics with a Node.js/Express server setup.
+This repository now contains a static Unity WebGL build of Baldi's Basics Classic.
 
-## Project Structure
+## Repository Structure
 
 ```
 .
-├── public/           # Static HTML files
-│   └── index.html
-├── assets/          # Game images, sounds, and other assets
-├── css/             # Stylesheet files
-│   └── style.css
-├── js/              # JavaScript game logic
-│   └── game.js
-├── server.js        # Express.js server
-├── package.json     # Node dependencies
-└── .env             # Environment configuration
+├── Build/            # Unity WebGL build files
+├── TemplateData/     # Unity WebGL template assets
+├── index.html        # Main game entry point
+└── README.md         # This file
 ```
 
-## Setup
+## Hosting on GitHub Pages
 
-### 1. Install Dependencies
+This repository can be hosted directly with GitHub Pages.
 
-```bash
-npm install
-```
+1. Push the repository to GitHub.
+2. In the repo settings, enable GitHub Pages.
+3. Set the source to the `main` branch and root directory.
+4. The game will be served from `https://<username>.github.io/<repo>/`.
 
-### 2. Configure Port
+## Notes
 
-Edit `.env` file to set your desired port:
-
-```
-PORT=3000
-```
-
-Or set it via environment variable when running:
-
-```bash
-PORT=8080 npm start
-```
-
-### 3. Add Game Files
-
-Place your game files in the appropriate directories:
-- **HTML/Entry Point**: `public/`
-- **Images/Sounds**: `assets/`
-- **Stylesheets**: `css/`
-- **Game Scripts**: `js/`
-
-### 4. Run the Server
-
-```bash
-npm start
-```
-
-The game will be available at `http://localhost:PORT` (default: 3000)
-
-## Port Configuration
-
-The server supports flexible port configuration:
-
-**Option 1: Using .env file**
-```
-PORT=8080
-```
-
-**Option 2: Environment variable**
-```bash
-PORT=8080 npm start
-```
-
-**Option 3: Default**
-```bash
-npm start  # Uses port 3000
-```
-
-## Development
-
-To run the development server:
-
-```bash
-npm run dev
-```
-
-## File Organization Guide
-
-- **public/**: Root-level static files (index.html, etc.)
-- **assets/**: All game assets (images, sprites, audio files)
-- **css/**: All stylesheets
-- **js/**: All JavaScript code
-
-## Next Steps
-
-1. Replace the placeholder files in `public/`, `css/`, and `js/` with your actual game files
-2. Configure the desired port in `.env`
-3. Run `npm install` and `npm start` to launch the server
-
----
-
-**Note**: Make sure all game files are organized in their respective directories for proper serving.
+- No server-side code is required.
+- All game assets are stored locally in `Build/` and `TemplateData/`.
+- `index.html` loads the Unity WebGL build directly.
