@@ -1,0 +1,1 @@
+function e(e,t){let n={};return e.forEach(e=>n[e[t]+``]=e),n}function t(e,t,n){let r=e.findIndex(t);return r===-1?(n?.onMissing?.(),[]):e.splice(r,1)}export{t as n,e as t};
