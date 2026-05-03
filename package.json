@@ -1,0 +1,20 @@
+{
+  "name": "baldis-basics-web",
+  "version": "1.0.0",
+  "description": "Web-based Baldis Basics game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "game",
+    "baldis",
+    "web"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
